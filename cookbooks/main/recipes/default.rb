@@ -103,9 +103,9 @@
 # include_recipe "jenkins"
 
 #enable Extension modules for a given Postgresql database
-# if ['solo','db_master', 'db_slave'].include?(node[:instance_role])
-  # Extensions that support both Postgres 9.0, 9.1 and 9.2
-  # postgresql9_autoexplain "dbname"
+ if ['solo','db_master', 'db_slave'].include?(node[:instance_role])
+  # Extensions that support both Postgres 9.0, 9.1, 9.2, and 9.3
+  postgresql9_autoexplain "dbguru"
   # postgresql9_btree_gin "dbname"
   # postgresql9_btree_gist "dbname"
   # postgresql9_chkpass "dbname"
@@ -148,4 +148,4 @@
   #Admin-Level Contribs
   # postgresql9_pg_buffercache "postgres"
   # postgresql9_pg_freespacemap "postgres"
-#end
+end
