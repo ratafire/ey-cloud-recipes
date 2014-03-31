@@ -2,7 +2,7 @@
 include_recipe "resque"
 include_recipe "resque-scheduler"
 include_recipe "redis"
-include_recipe "sidekiq"
+#include_recipe "sidekiq"
 include_recipe "redis-yml"
 include_recipe "sphinx"
 
